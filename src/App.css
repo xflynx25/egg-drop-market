@@ -2,6 +2,93 @@
   text-align: center;
 }
 
+/* src/App.css */
+/* Example color codes, replace with the exact ones from the logo */
+:root {
+  --rv-green: #3a9d23; /* Adjust to the specific green from the logo */
+  --rv-light-green: #a4d65e; /* Adjust to the specific light green from the logo */
+  --rv-white: #ffffff;
+}
+
+.logo {
+  max-height: 80px; /* Larger size for logos */
+  width: auto; /* Maintain aspect ratio */
+  padding: 0 15px; /* Space around logos */
+}
+
+.title {
+  font-size: 1.5em; /* Adjusted for space. You might not need to change this */
+  white-space: nowrap; /* Prevents the title from wrapping */
+  border: 2px dotted var(--rv-green); /* Dotted border using the theme color */
+  display: inline-block; /* To fit the border closely around the text */
+  padding: 10px; /* Some padding around the text */
+  border-radius: 10px; /* Optional: rounded corners for the dotted border */
+}
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2em; /* Smaller font size on smaller screens if necessary */
+  }
+  .logo {
+    max-height: 60px; /* Smaller logos on smaller screens */
+  }
+}
+
+/* Additional theming styles */
+body {
+  background-color: var(--rv-white);
+}
+
+.card {
+  border-color: var(--rv-green);
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.card.pressed, .card:active {
+  background-color: #f8f9fa; /* Grey background when pressed */
+}
+
+/* Style adjustments for the card body */
+.card-body {
+  text-align: left; /* Align text to the left */
+}
+
+/* Additional bottom margin for the title and price */
+.mb-2 {
+  margin-bottom: 0.5rem; /* Adjust the space as needed */
+}
+
+/* Bold style for the price */
+.price {
+  font-weight: bold;
+}
+
+/* Style for the stock info */
+.stock-info {
+  font-weight: normal;
+}
+
+/* Style for out-of-stock items */
+.out-of-stock .card {
+  border: 2px solid red; /* Red border for out-of-stock items */
+}
+
+.card-title {
+  color: var(--rv-green);
+  margin-bottom: 0; /* Removes the bottom margin from the title to keep it close to the price */
+}
+
+.price {
+  /* Style for the price, adjust as needed */
+  font-weight: bold; /* Makes the price bold */
+}
+/* Add more themed styles as needed */
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +122,60 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* src/App.css */
+/* ... existing styles ... */
+
+img.float-start {
+  max-height: 50px; /* Adjust as needed */
+  float: left;
+  margin-right: 10px;
+}
+
+img.float-end {
+  max-height: 50px; /* Adjust as needed */
+  float: right;
+  margin-left: 10px;
+}
+
+.rules-header {
+  /* You can adjust this if you need specific styling for the rules header */
+}
+
+.rules-text {
+  text-align: left; /* Aligns the text to the left */
+}
+
+/* Since we want the rules title to be left-aligned as well, let's override the centering from the global h2 */
+.rules-header h2 {
+  text-align: left;
+}
+
+
+/* Add to your existing App.css file */
+
+.color-values h3 {
+  margin-top: 20px;
+}
+
+.color-box {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  border: 1px solid #000; /* Add a slight border to color boxes */
+}
+
+.color-box.pink {
+  background-color: #ff69b4; /* Example pink color */
+}
+
+.color-box.red {
+  background-color: #ff0000; /* Example red color */
+}
+
+.color-box.other {
+  background-color: #cccccc; /* Example color for 'others' */
 }
